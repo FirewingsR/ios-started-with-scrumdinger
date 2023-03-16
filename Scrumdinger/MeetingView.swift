@@ -18,7 +18,7 @@ struct MeetingView: View {
                     Label("300", systemImage: "hourglass.bottomhalf.fill")
                 }
                 Spacer()
-                VStack(alignment: .leading) {
+                VStack(alignment: .trailing) {
                     Text("Seconds Remaining")
                         .font(.caption)
                     Label("600", systemImage: "hourglass.tophalf.fill")
@@ -27,7 +27,8 @@ struct MeetingView: View {
             .accessibilityElement(children: .ignore)
             .accessibilityLabel("Time remaining")
             .accessibilityValue("10 minutes")
-            Circle().strokeBorder(lineWidth: 24)
+            Circle()
+                .strokeBorder(lineWidth: 24)
             HStack {
                 Text("Speaker 1 of 3")
                 Spacer()
